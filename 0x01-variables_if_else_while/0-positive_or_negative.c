@@ -2,9 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - This program is to assign a random number to variable n
+ * each time it is executed.
+ *
+ * Description: "Assign random number to variable n each time it is executed."
+ *
+ * Return: Alway 0 (success)
+ */
 
 int main(void)
 
@@ -14,8 +19,6 @@ int main(void)
 	srand(time(0));
 
 	n = rand() - RAND_MAX / 2;
-
-	/* your code goes there */
 
 	if (n > 0)
 	{
