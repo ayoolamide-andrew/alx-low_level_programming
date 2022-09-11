@@ -20,7 +20,7 @@ int main(void)
 				if (p > m && m > n)
 				{
 					putchar(n);
-					puthar(m);
+					putchar(m);
 					putchar(p);
 					if (n != 55 || m != 56)
 					{
