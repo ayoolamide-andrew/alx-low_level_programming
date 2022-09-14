@@ -1,14 +1,13 @@
 #include "main.h"
 
 /**
- * _putchar - A program that prints _putchar, followed by a new line
+ * main - A program that prints _putchar, followed by a new line
  *
  * Description: The character to print
  * Return: Always 0 (sucess)
  */
 
-int _putchar(char c):
-
+int main(void)
 {
 
 	char text[10] = "_putchar";
