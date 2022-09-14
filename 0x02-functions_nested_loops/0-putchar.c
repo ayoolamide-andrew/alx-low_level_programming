@@ -7,7 +7,7 @@
  * Return: Always 0 (sucess)
  */
 
-int _putchar(char c)
+int _putchar(char c):
 
 {
 
