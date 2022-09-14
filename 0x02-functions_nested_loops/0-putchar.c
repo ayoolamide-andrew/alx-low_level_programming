@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * _putchar - A program that prints _putchar
- *
- * Description: To print _putchar
+ * _putchar - A program that prints _putchar, followed by a new line
  *
  * Return: Always 0 (sucess)
  */
 
-int _putchar(char c)
+int _putchar(char c);
+
 {
 	char text[10] = "_putchar";
+
 	int i = 0;
 
 	for (i = 0; i < 8; i++)
