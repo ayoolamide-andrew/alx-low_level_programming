@@ -3,10 +3,11 @@
 /**
  * _putchar - A program that prints _putchar, followed by a new line
  *
+ * Description: The character to print
  * Return: Always 0 (sucess)
  */
 
-int _putchar(char c);
+int _putchar(char c)
 
 {
 
