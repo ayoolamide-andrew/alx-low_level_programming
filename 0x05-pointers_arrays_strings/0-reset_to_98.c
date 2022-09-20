@@ -2,10 +2,10 @@
 
 /**
  * reset_to_98 - updates the value it points to 98
- * @n: pointer to the variable to update
- * return: Always 0
+ * @n: variable to be reset
+ * return: void
  */
-void reset_to_98(int *n);
+void reset_to_98(int *n)
 {
 	*n = 98;
 }
