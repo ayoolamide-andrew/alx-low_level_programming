@@ -6,9 +6,11 @@
  * @argv: array of pointers to arguments
  * Return: Always o
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int (*f)(int a, int b);
+	int arg1, arg2, result;
+	char o;
+	int (*func)(int, int);
 	int a, b;
 
 	if (argc != 4)
@@ -17,22 +19,26 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
+	arg1 = atoi(argv[1]);
+	arg2 = atoi(argv[3]);
 
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && b == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
+	func = get_op_func(argv[2]);
 
-	f = get_op_func(argv[2]);
-	if (f == NULL)
+	if (!func)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	printf("%d\n", f(a, b));
+	o = *argv[2];
+	if ((o == '/' || o == '%') && arg2 == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+	result = func(arg1, arg2);
+
+	printf("%d\n", result);
 	return (0);
 }
