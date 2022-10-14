@@ -4,6 +4,7 @@
  * print_numbers - prints numbers given as parameters
  * @separators: String to be printed between numbers
  * @n: number of integers passed to the function
+ * Return: No return
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
@@ -16,7 +17,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 			printf("%d", va_arg(list, int));
 			if (separator && i < n -1)
-				printf("%s", separator)
+				printf("%s", separator);
 	}
 	
 	printf("\n");
